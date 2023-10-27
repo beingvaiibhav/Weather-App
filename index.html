@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;  
+        font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color:#212022;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app-container{
+            height: 80%;
+            width: 30%;
+            border-radius: 20px;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+        .main-image{
+            width: 180px;
+        }
+        .other-image{
+            width: 50px;
+            height: 40px;
+            margin-top: 30px;
+            
+        }
+        .search-container{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+            margin-top: 40px;
+            padding: 10px;
+        }
+        .search-input{
+            border: none;
+            border-radius: 25px;
+            height: 45px;
+            width: 70%;
+            background-color: #ECFDFC;
+            cursor: pointer;
+            text-align: center;
+
+        }
+        .search-button{
+            border-radius: 25px;
+            width: 50px;
+            margin-left: 10px;
+            background-color: #ECFDFC;
+            border: none;
+            cursor: pointer;
+        }
+        .weather{
+            display: flex;
+            flex-direction: column;
+          align-items: center;
+        }
+        .weather p{
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+          
+        }
+        .other-info{
+            display: flex;
+            justify-content: center;
+        }
+        .humidity{
+            display: flex;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        @media only screen and (max-width:480px) {
+            .app-container{
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+           
+        }
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="app-container">
+            <div class="search-container">
+                <input class="search-input" type="text" name="search" id="search-location">
+                <button class="search-button" onclick="searchCity()"><img style="width:15px ;" src="images/search.png"/></button>
+            </div>
+            <div class="weather">
+                <img class="main-image" src="images/clear.png"/>
+
+                <p class="temp">7&deg; C</p>
+                <p class="city-name">New York</p>
+            </div>
+            <div class="other-info">
+                <div class="humidity">
+                    <img  class="other-image" src="images/humidity.png"/>
+                    <div style="margin-top: 25px;margin-left: 10px;            
+                        color: white;
+                    ">
+                        <p class="humidityy">83%</p>
+                        <p >Humidity</p>
+                    </div>
+                </div>
+                <div class="humidity" style="margin-left: 20px;">
+                    <img class="other-image" src="images/wind.png"/>
+                    <div style="margin-top: 25px; margin-left: 10px;
+                        color: white;
+                    ">
+                      
+                        <p class="wind">1.5Km/hr</p>
+                        <p>Wind Speed</p>
+                    </div>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+    
+
+    <script defer src="app.js"></script>
+</body>
+</html>
